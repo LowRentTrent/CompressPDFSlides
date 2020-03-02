@@ -11,8 +11,10 @@ Intended to be run from C:\TEMP, simply drop the pdf file onto the cmd file.
 Version History
 
 R2 2020-03-03
+
 Added PPT Print.bat - allows you to quickly turn .ppt files into PDFs.
 Added alt-rotate option - allows some pdfs that don't auto-rotate correctly to sometimes work better.
 
 R1
+
 Two variations included with different commands for different situations.
