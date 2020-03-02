@@ -16,6 +16,13 @@ ECHO.
 
 SET Outfile=C:\TEMP\%Outfile%_Cmprs_%Savestamp%.pdf
 
-"C:\Program Files\gs\gs9.26\bin\gswin64c.exe" -sDEVICE=pdfwrite -dPDFSETTINGS=/screen -dCompatibilityLevel=1.4 -dEmbedAllFonts=true -dSubsetFonts=true -dAutoRotatePages=/None -dColorImageDownsampleType=/Bicubic -dColorImageResolution=96  -dNOPAUSE -dBATCH -dGrayImageDownsampleType=/Bicubic -dGrayImageResolution=96 -dMonoImageDownsampleType=/Bicubic -dMonoImageResolution=96 -sPAPERSIZE=a5 -dFIXEDMEDIA -dPDFFitPage -dAutoRotatePages=/PageByPage -sOutputFile="%Outfile%" "%~1"
+"C:\Program Files\gs\gs9.50\bin\gswin64c.exe" -sDEVICE=pdfwrite ^
+-dPDFSETTINGS=/screen -dCompatibilityLevel=1.4 -dEmbedAllFonts=true ^
+-dSubsetFonts=true -dAutoRotatePages=/All ^
+-dColorImageDownsampleType=/Bicubic -dColorImageResolution=150  ^
+-dNOPAUSE -dBATCH -dGrayImageDownsampleType=/Bicubic ^
+-dGrayImageResolution=150 -dMonoImageDownsampleType=/Bicubic ^
+-dMonoImageResolution=150 -sPAPERSIZE=a5 -dFIXEDMEDIA -dPDFFitPage ^
+ -sOutputFile="%Outfile%" "%~1"
 
 Pause

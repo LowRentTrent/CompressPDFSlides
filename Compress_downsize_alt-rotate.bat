@@ -18,10 +18,11 @@ SET Outfile=C:\TEMP\%Outfile%_Cmprs_%Savestamp%.pdf
 
 "C:\Program Files\gs\gs9.50\bin\gswin64c.exe" -sDEVICE=pdfwrite ^
 -dPDFSETTINGS=/screen -dCompatibilityLevel=1.4 -dEmbedAllFonts=true ^
--dSubsetFonts=true -dAutoRotatePages=/None ^
--dColorImageDownsampleType=/Bicubic -dColorImageResolution=150 ^
+-dSubsetFonts=true -dAutoRotatePages=/PageByPage ^
+-dColorImageDownsampleType=/Bicubic -dColorImageResolution=150  ^
 -dNOPAUSE -dBATCH -dGrayImageDownsampleType=/Bicubic ^
 -dGrayImageResolution=150 -dMonoImageDownsampleType=/Bicubic ^
--dMonoImageResolution=150 -sOutputFile="%Outfile%" "%~1"
+-dMonoImageResolution=150 -sPAPERSIZE=a5 -dFIXEDMEDIA -dPDFFitPage ^
+ -sOutputFile="%Outfile%" "%~1"
 
 Pause
